@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Vecta - AI Application Assistant [DEV]",
+  "name": "Vecta - AI Application Assistant",
   "version": "1.5.0",
-  "description": "AI-powered job application assistant. Auto-fill applications, sync sessions, and track your job search progress. [DEV — localhost:8000]",
+  "description": "AI-powered job application assistant. Auto-fill applications, sync sessions, and track your job search progress.",
   "permissions": [
     "activeTab",
     "storage",
