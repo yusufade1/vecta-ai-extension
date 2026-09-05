@@ -1,0 +1,33 @@
+import { w as createLucideIcon } from "./popup-B7pB8VfI.js";
+/**
+* @license lucide-react v1.31.0 - ISC
+*
+* This source code is licensed under the ISC license.
+* See the LICENSE file in the root directory of this source tree.
+*/
+var Building2 = createLucideIcon("building-2", [
+	["path", {
+		d: "M10 12h4",
+		key: "a56b0p"
+	}],
+	["path", {
+		d: "M10 8h4",
+		key: "1sr2af"
+	}],
+	["path", {
+		d: "M14 21v-3a2 2 0 0 0-4 0v3",
+		key: "1rgiei"
+	}],
+	["path", {
+		d: "M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2",
+		key: "secmi2"
+	}],
+	["path", {
+		d: "M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16",
+		key: "16ra0t"
+	}]
+]);
+//#endregion
+export { Building2 as t };
+
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnVpbGRpbmctMi1DU0ZVcC02cy5qcyIsIm5hbWVzIjpbXSwic291cmNlcyI6WyIuLi8uLi9ub2RlX21vZHVsZXMvbHVjaWRlLXJlYWN0L2Rpc3QvZXNtL2ljb25zL2J1aWxkaW5nLTIubWpzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qKlxuICogQGxpY2Vuc2UgbHVjaWRlLXJlYWN0IHYxLjMxLjAgLSBJU0NcbiAqXG4gKiBUaGlzIHNvdXJjZSBjb2RlIGlzIGxpY2Vuc2VkIHVuZGVyIHRoZSBJU0MgbGljZW5zZS5cbiAqIFNlZSB0aGUgTElDRU5TRSBmaWxlIGluIHRoZSByb290IGRpcmVjdG9yeSBvZiB0aGlzIHNvdXJjZSB0cmVlLlxuICovXG5cbmltcG9ydCBjcmVhdGVMdWNpZGVJY29uIGZyb20gJy4uL2NyZWF0ZUx1Y2lkZUljb24ubWpzJztcblxuY29uc3QgX19pY29uTm9kZSA9IFtcbiAgW1wicGF0aFwiLCB7IGQ6IFwiTTEwIDEyaDRcIiwga2V5OiBcImE1NmIwcFwiIH1dLFxuICBbXCJwYXRoXCIsIHsgZDogXCJNMTAgOGg0XCIsIGtleTogXCIxc3IyYWZcIiB9XSxcbiAgW1wicGF0aFwiLCB7IGQ6IFwiTTE0IDIxdi0zYTIgMiAwIDAgMC00IDB2M1wiLCBrZXk6IFwiMXJnaWVpXCIgfV0sXG4gIFtcbiAgICBcInBhdGhcIixcbiAgICB7XG4gICAgICBkOiBcIk02IDEwSDRhMiAyIDAgMCAwLTIgMnY3YTIgMiAwIDAgMCAyIDJoMTZhMiAyIDAgMCAwIDItMlY5YTIgMiAwIDAgMC0yLTJoLTJcIixcbiAgICAgIGtleTogXCJzZWNtaTJcIlxuICAgIH1cbiAgXSxcbiAgW1wicGF0aFwiLCB7IGQ6IFwiTTYgMjFWNWEyIDIgMCAwIDEgMi0yaDhhMiAyIDAgMCAxIDIgMnYxNlwiLCBrZXk6IFwiMTZyYTB0XCIgfV1cbl07XG5jb25zdCBCdWlsZGluZzIgPSBjcmVhdGVMdWNpZGVJY29uKFwiYnVpbGRpbmctMlwiLCBfX2ljb25Ob2RlKTtcblxuZXhwb3J0IHsgX19pY29uTm9kZSwgQnVpbGRpbmcyIGFzIGRlZmF1bHQgfTtcbi8vIyBzb3VyY2VNYXBwaW5nVVJMPWJ1aWxkaW5nLTIubWpzLm1hcFxuIl0sInhfZ29vZ2xlX2lnbm9yZUxpc3QiOlswXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFzQkEsSUFBTSxZQUFZLGlCQUFpQixjQUFjO0NBWi9DLENBQUMsUUFBUTtFQUFFLEdBQUc7RUFBWSxLQUFLO0NBQVMsQ0FBQztDQUN6QyxDQUFDLFFBQVE7RUFBRSxHQUFHO0VBQVcsS0FBSztDQUFTLENBQUM7Q0FDeEMsQ0FBQyxRQUFRO0VBQUUsR0FBRztFQUE2QixLQUFLO0NBQVMsQ0FBQztDQUMxRCxDQUNFLFFBQ0E7RUFDRSxHQUFHO0VBQ0gsS0FBSztDQUNQLENBQ0Y7Q0FDQSxDQUFDLFFBQVE7RUFBRSxHQUFHO0VBQTRDLEtBQUs7Q0FBUyxDQUFDO0FBRTFCLENBQVUifQ==

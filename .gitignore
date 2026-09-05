@@ -1,0 +1,5 @@
+# Dependencies
+dist/zip-cache/
+*.zip
+.DS_Store
+Thumbs.db

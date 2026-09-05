@@ -1,0 +1,726 @@
+{
+  "manifest_version": 3,
+  "name": "Vecta - AI Application Assistant [DEV]",
+  "version": "1.5.0",
+  "description": "AI-powered job application assistant. Auto-fill applications, sync sessions, and track your job search progress. [DEV — localhost:8000]",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "identity",
+    "tabs",
+    "cookies",
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "https://boards.greenhouse.io/*",
+    "https://boards.eu.greenhouse.io/*",
+    "https://jobs.lever.co/*",
+    "https://*.linkedin.com/*",
+    "https://linkedin.com/*",
+    "https://*.workday.com/*",
+    "https://workday.com/*",
+    "https://*.glassdoor.com/*",
+    "https://glassdoor.com/*",
+    "https://*.indeed.com/*",
+    "https://indeed.com/*",
+    "https://*.workable.com/*",
+    "https://workable.com/*",
+    "https://*.dice.com/*",
+    "https://dice.com/*",
+    "https://*.ziprecruiter.com/*",
+    "https://ziprecruiter.com/*",
+    "https://*.bayt.com/*",
+    "https://bayt.com/*",
+    "https://*.wellfound.com/*",
+    "https://wellfound.com/*",
+    "https://*.seek.com/*",
+    "https://seek.com/*",
+    "https://www.reed.co.uk/*",
+    "https://reed.co.uk/*",
+    "https://*.builtin.com/*",
+    "https://builtin.com/*",
+    "https://jobs.ashbyhq.com/*",
+    "https://jobs.smartrecruiters.com/*",
+    "https://careers.smartrecruiters.com/*",
+    "https://*.taleo.net/*",
+    "https://*.applytojob.com/*",
+    "https://jobs.pinpointhq.com/*",
+    "https://*.pinpoint.com/*",
+    "https://*.teamtailor.com/*",
+    "https://jobs.personio.com/*",
+    "https://*.personio.de/*",
+    "https://*.bamboohr.com/*",
+    "https://jobs.jobvite.com/*",
+    "https://careers.recruitee.com/*",
+    "https://*.breezy.hr/*",
+    "https://careers.icims.com/*",
+    "https://*.avature.net/*",
+    "https://*.monster.com/*",
+    "https://monster.com/*",
+    "https://*.careerbuilder.com/*",
+    "https://careerbuilder.com/*",
+    "https://*.simplyhired.com/*",
+    "https://simplyhired.com/*",
+    "https://*.cv-library.co.uk/*",
+    "https://cv-library.co.uk/*",
+    "https://*.totaljobs.com/*",
+    "https://totaljobs.com/*",
+    "https://*.jobserve.com/*",
+    "https://jobserve.com/*",
+    "https://*.jobsite.co.uk/*",
+    "https://jobsite.co.uk/*",
+    "https://*.stepstone.com/*",
+    "https://stepstone.com/*",
+    "https://*.stepstone.de/*",
+    "https://*.xing.com/*",
+    "https://xing.com/*",
+    "https://*.naukri.com/*",
+    "https://naukri.com/*",
+    "https://*.naukrigulf.com/*",
+    "https://naukrigulf.com/*",
+    "https://*.wuzzuf.net/*",
+    "https://wuzzuf.net/*",
+    "https://*.gulftalent.com/*",
+    "https://gulftalent.com/*",
+    "https://*.adzuna.com/*",
+    "https://adzuna.com/*",
+    "https://*.remoteok.com/*",
+    "https://remoteok.com/*",
+    "https://*.weworkremotely.com/*",
+    "https://weworkremotely.com/*",
+    "https://*.flexjobs.com/*",
+    "https://flexjobs.com/*",
+    "https://*.hired.com/*",
+    "https://hired.com/*",
+    "https://*.craigslist.org/*",
+    "https://craigslist.org/*",
+    "https://api.vectai.tech/*",
+    "https://vectai.tech/*",
+    "https://*.vectai.tech/*",
+    "http://127.0.0.1:8000/*",
+    "http://localhost:8000/*"
+  ],
+  "background": {
+    "service_worker": "src/background/index.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "src/popup/index.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://boards.greenhouse.io/*",
+        "https://boards.eu.greenhouse.io/*"
+      ],
+      "js": [
+        "src/content/greenhouse.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://jobs.lever.co/*"
+      ],
+      "js": [
+        "src/content/lever.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.linkedin.com/jobs/*",
+        "https://linkedin.com/jobs/*"
+      ],
+      "js": [
+        "src/content/linkedin.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.indeed.com/*",
+        "https://indeed.com/*"
+      ],
+      "js": [
+        "src/content/indeed.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.workable.com/*",
+        "https://workable.com/*"
+      ],
+      "js": [
+        "src/content/workable.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.bayt.com/*",
+        "https://bayt.com/*"
+      ],
+      "js": [
+        "src/content/bayt.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.glassdoor.com/*",
+        "https://glassdoor.com/*"
+      ],
+      "js": [
+        "src/content/glassdoor.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://www.reed.co.uk/*",
+        "https://reed.co.uk/*"
+      ],
+      "js": [
+        "src/content/reed.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.builtin.com/*",
+        "https://builtin.com/*"
+      ],
+      "js": [
+        "src/content/builtin.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.dice.com/*",
+        "https://dice.com/*"
+      ],
+      "js": [
+        "src/content/dice.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.ziprecruiter.com/*",
+        "https://ziprecruiter.com/*"
+      ],
+      "js": [
+        "src/content/ziprecruiter.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.wellfound.com/*",
+        "https://wellfound.com/*"
+      ],
+      "js": [
+        "src/content/wellfound.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.seek.com/*",
+        "https://seek.com/*"
+      ],
+      "js": [
+        "src/content/seek.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://jobs.ashbyhq.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://jobs.smartrecruiters.com/*",
+        "https://careers.smartrecruiters.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.taleo.net/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.applytojob.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://jobs.pinpointhq.com/*",
+        "https://*.pinpoint.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.teamtailor.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://jobs.personio.com/*",
+        "https://*.personio.de/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.bamboohr.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://jobs.jobvite.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://careers.recruitee.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.breezy.hr/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://careers.icims.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.avature.net/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.monster.com/*",
+        "https://monster.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.careerbuilder.com/*",
+        "https://careerbuilder.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.simplyhired.com/*",
+        "https://simplyhired.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.cv-library.co.uk/*",
+        "https://cv-library.co.uk/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.totaljobs.com/*",
+        "https://totaljobs.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.jobserve.com/*",
+        "https://jobserve.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.jobsite.co.uk/*",
+        "https://jobsite.co.uk/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.stepstone.com/*",
+        "https://stepstone.com/*",
+        "https://*.stepstone.de/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.xing.com/*",
+        "https://xing.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.naukri.com/*",
+        "https://naukri.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.naukrigulf.com/*",
+        "https://naukrigulf.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.wuzzuf.net/*",
+        "https://wuzzuf.net/*"
+      ],
+      "js": [
+        "src/content/wuzzuf.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.gulftalent.com/*",
+        "https://gulftalent.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.adzuna.com/*",
+        "https://adzuna.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.remoteok.com/*",
+        "https://remoteok.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.weworkremotely.com/*",
+        "https://weworkremotely.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.flexjobs.com/*",
+        "https://flexjobs.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.hired.com/*",
+        "https://hired.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.craigslist.org/*",
+        "https://craigslist.org/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://www.linkedin.com/messaging/*"
+      ],
+      "js": [
+        "src/content/outreach-composer.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.linkedin.com/feed/*",
+        "https://linkedin.com/feed/*",
+        "https://*.linkedin.com/posts/*",
+        "https://linkedin.com/posts/*",
+        "https://*.linkedin.com/in/*",
+        "https://linkedin.com/in/*"
+      ],
+      "js": [
+        "src/content/linkedin-feed.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icons/*",
+        "assets/*",
+        "src/content/*",
+        "logo.svg"
+      ],
+      "matches": [
+        "https://boards.greenhouse.io/*",
+        "https://boards.eu.greenhouse.io/*",
+        "https://jobs.lever.co/*",
+        "https://*.linkedin.com/*",
+        "https://linkedin.com/*",
+        "https://*.indeed.com/*",
+        "https://indeed.com/*",
+        "https://*.workable.com/*",
+        "https://workable.com/*",
+        "https://*.bayt.com/*",
+        "https://bayt.com/*",
+        "https://*.glassdoor.com/*",
+        "https://glassdoor.com/*",
+        "https://www.reed.co.uk/*",
+        "https://reed.co.uk/*",
+        "https://*.builtin.com/*",
+        "https://builtin.com/*",
+        "https://*.dice.com/*",
+        "https://dice.com/*",
+        "https://*.ziprecruiter.com/*",
+        "https://ziprecruiter.com/*",
+        "https://*.wellfound.com/*",
+        "https://wellfound.com/*",
+        "https://*.seek.com/*",
+        "https://seek.com/*",
+        "https://jobs.ashbyhq.com/*",
+        "https://jobs.smartrecruiters.com/*",
+        "https://careers.smartrecruiters.com/*",
+        "https://*.taleo.net/*",
+        "https://*.applytojob.com/*",
+        "https://jobs.pinpointhq.com/*",
+        "https://*.pinpoint.com/*",
+        "https://*.teamtailor.com/*",
+        "https://jobs.personio.com/*",
+        "https://*.personio.de/*",
+        "https://*.bamboohr.com/*",
+        "https://jobs.jobvite.com/*",
+        "https://careers.recruitee.com/*",
+        "https://*.breezy.hr/*",
+        "https://careers.icims.com/*",
+        "https://*.avature.net/*",
+        "https://*.monster.com/*",
+        "https://monster.com/*",
+        "https://*.careerbuilder.com/*",
+        "https://careerbuilder.com/*",
+        "https://*.simplyhired.com/*",
+        "https://simplyhired.com/*",
+        "https://*.cv-library.co.uk/*",
+        "https://cv-library.co.uk/*",
+        "https://*.totaljobs.com/*",
+        "https://totaljobs.com/*",
+        "https://*.jobserve.com/*",
+        "https://jobserve.com/*",
+        "https://*.jobsite.co.uk/*",
+        "https://jobsite.co.uk/*",
+        "https://*.stepstone.com/*",
+        "https://stepstone.com/*",
+        "https://*.stepstone.de/*",
+        "https://*.xing.com/*",
+        "https://xing.com/*",
+        "https://*.naukri.com/*",
+        "https://naukri.com/*",
+        "https://*.naukrigulf.com/*",
+        "https://naukrigulf.com/*",
+        "https://*.wuzzuf.net/*",
+        "https://wuzzuf.net/*",
+        "https://*.gulftalent.com/*",
+        "https://gulftalent.com/*",
+        "https://*.adzuna.com/*",
+        "https://adzuna.com/*",
+        "https://*.remoteok.com/*",
+        "https://remoteok.com/*",
+        "https://*.weworkremotely.com/*",
+        "https://weworkremotely.com/*",
+        "https://*.flexjobs.com/*",
+        "https://flexjobs.com/*",
+        "https://*.hired.com/*",
+        "https://hired.com/*",
+        "https://*.craigslist.org/*",
+        "https://craigslist.org/*"
+      ]
+    }
+  ]
+}
