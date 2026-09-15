@@ -1,10 +1,11 @@
 {
   "manifest_version": 3,
   "name": "Vecta - AI Application Assistant",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "AI-powered job application assistant. Auto-fill applications, sync sessions, and track your job search progress.",
   "permissions": [
     "activeTab",
+    "scripting",
     "storage",
     "identity",
     "tabs",
@@ -12,6 +13,7 @@
     "unlimitedStorage"
   ],
   "host_permissions": [
+    "*://*/*",
     "https://boards.greenhouse.io/*",
     "https://boards.eu.greenhouse.io/*",
     "https://jobs.lever.co/*",
@@ -80,6 +82,12 @@
     "https://naukrigulf.com/*",
     "https://*.wuzzuf.net/*",
     "https://wuzzuf.net/*",
+    "https://*.forasna.com/*",
+    "https://forasna.com/*",
+    "https://*.tanqeeb.com/*",
+    "https://tanqeeb.com/*",
+    "https://*.akhtaboot.com/*",
+    "https://akhtaboot.com/*",
     "https://*.gulftalent.com/*",
     "https://gulftalent.com/*",
     "https://*.adzuna.com/*",
@@ -530,6 +538,39 @@
     },
     {
       "matches": [
+        "https://*.forasna.com/*",
+        "https://forasna.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.tanqeeb.com/*",
+        "https://tanqeeb.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
+        "https://*.akhtaboot.com/*",
+        "https://akhtaboot.com/*"
+      ],
+      "js": [
+        "src/content/generic-host.js"
+      ],
+      "run_at": "document_idle",
+      "type": "module"
+    },
+    {
+      "matches": [
         "https://*.gulftalent.com/*",
         "https://gulftalent.com/*"
       ],
@@ -706,6 +747,12 @@
         "https://naukrigulf.com/*",
         "https://*.wuzzuf.net/*",
         "https://wuzzuf.net/*",
+        "https://*.forasna.com/*",
+        "https://forasna.com/*",
+        "https://*.tanqeeb.com/*",
+        "https://tanqeeb.com/*",
+        "https://*.akhtaboot.com/*",
+        "https://akhtaboot.com/*",
         "https://*.gulftalent.com/*",
         "https://gulftalent.com/*",
         "https://*.adzuna.com/*",
