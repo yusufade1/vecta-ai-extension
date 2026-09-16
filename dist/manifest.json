@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Vecta - AI Application Assistant",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "AI-powered job application assistant. Auto-fill applications, sync sessions, and track your job search progress.",
   "permissions": [
     "activeTab",
@@ -128,6 +128,19 @@
     "128": "icons/icon128.png"
   },
   "content_scripts": [
+    {
+      "matches": [
+        "https://vectai.tech/*",
+        "https://*.vectai.tech/*",
+        "http://localhost:5173/*",
+        "http://localhost:8000/*",
+        "http://127.0.0.1:8000/*"
+      ],
+      "js": [
+        "src/content/bridge.js"
+      ],
+      "run_at": "document_start"
+    },
     {
       "matches": [
         "https://boards.greenhouse.io/*",
