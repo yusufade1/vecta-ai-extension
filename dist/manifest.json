@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Vecta - AI Application Assistant",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "AI-powered job application assistant. Auto-fill applications, sync sessions, and track your job search progress.",
   "permissions": [
     "activeTab",
@@ -10,7 +10,8 @@
     "identity",
     "tabs",
     "cookies",
-    "unlimitedStorage"
+    "unlimitedStorage",
+    "contextMenus"
   ],
   "host_permissions": [
     "*://*/*",
@@ -111,6 +112,14 @@
   "background": {
     "service_worker": "src/background/index.js",
     "type": "module"
+  },
+  "commands": {
+    "auto-fill": {
+      "suggested_key": {
+        "default": "Alt+Shift+F"
+      },
+      "description": "Auto-fill the current job application with Vecta"
+    }
   },
   "action": {
     "default_popup": "src/popup/index.html",

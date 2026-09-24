@@ -1,0 +1,1 @@
+import{T as c}from"./popup-DRM4Yviy.js";var e=[["circle",{cx:"12",cy:"12",r:"10",key:"1mglay"}],["path",{d:"M12 6v6l4 2",key:"mmk7yg"}]],r=c("clock",e);export{r as t};
